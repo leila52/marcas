@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Primitiva</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Función para generar un número aleatorio entre min y max 
+        function generarNumeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Generar 6 números ale entre 1 y 49
+        var resultadoPrimitiva = [];
+        for (var i = 0; i < 6; i++) {
+            resultadoPrimitiva.push(generarNumeroAleatorio(1, 49));
+        }
+
+        // result
+        document.write("<p>Números de la Primitiva: " + resultadoPrimitiva.join(', ') + "</p>");
+    </script>
+</body>
+</html>

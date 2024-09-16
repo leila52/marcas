@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Quiniela</title>
+</head>
+<body>
+    <h1>Quiniela:</h1>
+    <script type="text/javascript">
+        // Función para generar un número aleatorio entre min y max 
+        function generarNumeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Generar catorce números aleatorios entre 1-3 (1, 2 o 3=X)
+        var quiniela = [];
+        for (var i = 0; i < 14; i++) {
+            var resultado = generarNumeroAleatorio(1, 3);
+            quiniela.push(resultado === 3 ? 'X' : resultado);
+        }
+
+        // Generar dos números aleatorios entre 0 y 3 para parto 15
+        var partido15Resultado1 = generarNumeroAleatorio(0, 3);
+        var partido15Resultado2 = generarNumeroAleatorio(0, 3);
+
+        // Mostrar la quiniela en la página
+        document.write("<p>Partidos 1-14: " + quiniela.join(' | ') + "</p>");
+        document.write("<p>Partido 15: " + (partido15Resultado1 === 3 ? 'M' : partido15Resultado1) + " - " +(partido15Resultado2 === 3 ? 'M' : partido15Resultado2) + "</p>");
+    </script>
+</body>
+</html>

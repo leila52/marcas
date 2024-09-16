@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipulación de Estilos con JavaScript</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #titulo {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #miDiv {
+      width: 300px;
+      height: 200px;
+      border: 4px solid #333;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="titulo">
+    <h1>Empezando con JavaScript</h1>
+  </div>
+  <hr>
+  <div id="miDiv">
+    <p>Texto del div <br></p>
+  </div>
+  <hr>
+  <div>
+    <label for="textoInput">Nuevo Texto: </label>
+    <input type="text" id="textoInput">
+  </div>
+  
+  
+
+  <div>
+    <label for="fondoInput">Color de Fondo: </label>
+    <input type="color" id="fondoInput">
+  </div>
+  
+  <div>
+    <label for="bordeInput">Color de Borde: </label>
+    <input type="color" id="bordeInput">
+  </div>
+  
+  <legend></legend>
+  <br>
+
+  <div>
+    <label for="colorTextoInput">Color de Texto: </label>
+    <input type="color" id="colorTextoInput">
+  </div>
+
+  <hr>
+  <button onclick="cambiarTexto()">Cambiar texto</button>
+  <button onclick="cambiarFondo()">Cambiar fondo</button>
+  <button onclick="cambiarBorde()">Cambiar borde</button>
+  <button onclick="cambiarColorTexto()">Cambiar color texto</button>
+
+  <script>
+    function cambiarTexto() {
+      var nuevoTexto = document.getElementById("textoInput").value;
+      document.getElementById("miDiv").innerHTML = "<p>" + nuevoTexto + "</p>";
+    }
+
+    function cambiarFondo() {
+       var nuevoColorFondo = document.getElementById("fondoInput").value;
+       var miDiv= document.getElementById("miDiv")
+      document.getElementById("miDiv").style.backgroundColor = nuevoColorFondo;
+    }
+
+    function cambiarBorde() {
+      var nuevoColorBorde = document.getElementById("bordeInput").value;
+      document.getElementById("miDiv").style.borderColor = nuevoColorBorde;
+    }
+
+    function cambiarColorTexto() {
+      var nuevoColorTexto = document.getElementById("colorTextoInput").value;
+      document.getElementById("miDiv").style.color = nuevoColorTexto;
+    }
+  </script>
+
+</body>
+</html>

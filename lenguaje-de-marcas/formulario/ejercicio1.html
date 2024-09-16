@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1{
+            color: rgb(224, 18, 214);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            border: 2px solid rgb(18, 183, 224);
+        }
+        input:hover{
+            border: 2px solid rgb(107, 18, 224);
+        }
+        div{
+            margin: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Registro en una red social</h1>
+    <form action="/paginaDestino"method="get">
+    <div>
+        <label for="nom">Nombre</label>
+        <input type="text" name="nombre" id="nom" maxlenght="25"/>
+    </div>
+    <div>
+        <label for="lname">Apellidos</label>
+        <input type="text" name="lname" id="lname" />
+    </div>
+    <div>
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="em" />
+    </div>
+    <div>
+        <label for="pwd">Contraseña</label><br>
+        <input type="password" id="pwd" name="pwd"/>
+    </div>
+    <div>
+        <label for="domicilio">Domicilio</label>
+        <input type="text" name="domicilio" id="domicilio"/>
+    </div>
+    <div>
+        <label for="cp">Codigo postal</label>
+        <input type="number" id="cp" name="cp"/>
+    </div>
+    <div>
+        <label for="telefono">Numero de telefono</label>
+        <input type="tel" id="telefono" max="9" min="0"/>
+    </div>
+    <div>
+        <label for="fecha">fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha">
+    </div>
+    <div>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </div>
+   
+    </form>
+</body>
+</html>

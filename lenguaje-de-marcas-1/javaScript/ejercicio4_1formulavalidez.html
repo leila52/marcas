@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 1</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form {
+            width: 450px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        div {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input,
+        select {
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        button {
+            color: white;
+            border-color: #0c8f1b;
+            border-radius: 5px;
+            background-color: #0c8f1b;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        #error {
+            display: none;
+            color: rgb(237, 68, 68);
+        }
+    </style>
+    <script>
+        function validar(){
+            var nombre= document.getElementById('nombre').value;
+            var apellido= document.getElementById('ape').value;
+            var direccion= document.getElementById('direccion').value;
+            var edad= document.getElementById('edad').value;
+            var estudios= document.getElementById('estudios').value;
+            var acepto= document.getElementById('acepto').value;
+
+            if(nombre.length <2 || apellido.length<10 || direccion.length === 0 || edad.length ===0 || estudios === ""|| !acepto) {
+                document.getElementById('error').style.display= 'block';
+                return false;
+            }
+             // validar mayor de edad
+             if(parseInt(edad)< 18){
+                alert('debes se mayor de edad');
+                return false;
+             }
+             return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+    <form name="form1" onsubmit='return validar();'>
+        <div>
+            <label for='nombre'>Nombre *</label>
+            <input type='text' name='nombre' id='nombre' />
+        </div>
+        <div>
+            <label for='ape'>Apellido*</label>
+            <input type='text' name='ape' id='ape' />
+        </div>
+        <div>
+            <label for='direccion'>Direccion *</label>
+            <input type='text' name='direccion' id='direccion' />
+        </div>
+        <div>
+            <label for='edad'>Edad *</label>
+            <input type='text' name='edad' id='edad' />
+        </div>
+        <div>
+            <label for='estudios'>Nivel de Estudios *</label>
+            <select id='estudios' name='estudios' />
+            <option value=''>Selecciona</option>
+            <option>Ninguno</option>
+            <option>Primarios</option>
+            <option>Bachiller</option>
+            <option>Grado</option>
+            <option>Master</option>
+            </select>
+        </div>
+        <div>
+            <label>
+                <input type='checkbox' value='SI' id='acepto' />
+                He leido y acepto las condiciones.
+            </label>
+        </div>
+        <div>
+            <span id="error">Algunos campos no son correctos, revísalos</span>
+        </div>
+        <button>Registrarse</button>
+    </form>
+</body>
+
+</html>

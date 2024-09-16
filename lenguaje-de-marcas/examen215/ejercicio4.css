@@ -1,0 +1,27 @@
+*{
+    margin: 10px;
+    background-color: white;
+    font-style: normal;
+    background: 750px;
+
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 17px;
+}
+.naranja{
+    color: #f48224;
+}
+img{
+    float: right;
+    width: 20rem;
+    margin: 10;
+}
+div{
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    left: 0px;
+}

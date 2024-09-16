@@ -1,0 +1,46 @@
+body{
+    background-image: url(img/estrellas.jpg);
+}
+#principal{
+    text-align: center;
+    width: 850px;
+    margin: auto;
+}
+h1{
+    color: #ffffce;
+    margin-left: 25px;
+    text-align: 50px;
+    font-size: 3rem;
+    text-align: center;
+}
+div{
+    text-align: center;
+    width: 850px;
+    height: 850px;
+}
+#rosa{
+    background-color: #EF4BA8;
+  
+}
+#turquesa{
+    background-color: #23E0B3;
+  
+}
+#azul{
+    background-color: #6AE7FB;
+
+}
+#naranja{
+    background-color: #fc827e;
+   
+}
+h2,h3{
+    color: white;
+    text-align: center;
+}
+p{
+    color: black;
+    text-align: justify;
+    padding: ;
+
+}

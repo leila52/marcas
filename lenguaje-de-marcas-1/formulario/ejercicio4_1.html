@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Pago</title>
+    <style>
+        body {
+            margin: 0 auto;
+            width: 700px;
+
+        }
+        button{
+            margin: auto;
+        }
+        legend {
+            margin: 3%;
+        }
+        fieldset{
+            border-radius: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form action="/pagoGoya" method="post">
+        <fieldset>
+            <legend> </legend>
+            <h1>FORMULARIO DE PAGO</h1>
+            <fieldset>
+                <legend> Información de contacto</legend>
+                <fieldset>
+                    <legend>Profesión</legend>
+                    <div>
+                        <input type="radio" id="prof" name="elegir" checked/>
+                        <label for="prof">Profesor/a</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="est" name="elegir"/>
+                        <label for="est">Estudiante</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ot" name="elegir"/>
+                        <label for="ot">Otro</label>
+                    </div>
+                </fieldset>
+            <div>
+                <label for="nom">Nombre:</label>
+                <input type="text" name="nombre" id="nom"  required="required" maxlenght="25" placeholder=" Escribe tu Nombre" />
+            </div>
+            <legend></legend>
+            <div>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="em" required="required" placeholder="correo@empresa.com">
+            </div>
+            <div>
+                <label for="tlf">Numero de telefono</label>
+                <input type="text" id="tlf" required="required" placeholder="555 555 555" pattern="\d{3} \d{3} \d{3} " required/>
+            </div>
+            <div>
+                <label for="pwd">Contraseña</label><br>
+                <input type="password" id="pwd" name="pwd" required="required"/>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Informacion de pago</legend>
+            <div>
+                <div>
+                    <label for="tpo">Tipo de tarjeta:</label>
+                    <select name="tipo" id="tipo">
+                        <optgroup label="Visa">
+                            <option>visa</option>
+                            <option>MasterCard</option>
+                            <option>American Express</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="Numero">Numero de Tarjeta:</label>
+                    <input type="text" id="Numero" required="required"placeholder="1111 1111 1111 1111" pattern="\d{4} \d{4} \d{4} \d{4} " />
+                </div>
+                <div>
+                    <label for="fechaCaducidad">Fecha de Caducidad:</label>
+                    <input type="date" id="fechaCaducidad" name="fechaCaducidad" required="required" min="2023-12-31"/>
+                </div>
+                <div>
+                    <label for="tpo">Metodo de pago preferido:</label>
+                    <select name="tipo" id="tipo" size="3">
+                            <option>Tarjeta de crédito</option>
+                            <option>Paypal</option>
+                            <option>Bizum</option>
+                            <option>Trasferencia</option>
+                            <option>Otros</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Añadir nueva dirección</legend>
+            <div>
+                <div >
+                    <input type="radio" id="calle" name="elegir" checked/>
+                    <label for="calle">Calle</label>
+                    <input type="radio" id="av" name="elegir"/>
+                    <label for="av">Avenida</label>
+                    <input type="radio" id="pz" name="elegir" />
+                    <label for="pz">Plaza</label>
+                </div>
+                <div>
+                    <input type="text" name="cale" id="cale"  required="required" placeholder="Ej. Santa Irene Nº 25" />
+                    <label for="cale">CP*</label>
+                    <input type="text" name="cale" id="cale" pattern="[0-9]{5}" placeholder="28003" required />
+                </div>
+                <div>
+                    <select name="tipo" id="tipo" required="required" >
+                        <option >Elige la poblacion</option>
+                        <option >Malaga</option>
+                        <option>Madrid</option>
+                        <option>Barcelona</option>
+                        <option>Murcia</option>
+                        <option>Asturias</option>
+                    </select>
+                </div>
+                <label for="ms">Observaciones(max 5 lineas)</label>
+                <textarea  placeholder="ej.llamar antes por telefono,el timbre no funciona" id="ms" name="ms" rows="5" ></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Política de privacidad</legend>
+            <div>
+                <input type="checkbox" id="politica" name="politica" />
+                <label for="politica">He leído y acepto el Condiciones Generales de contratación y la Politica de privacidad.</label>
+            </div>
+            <div>
+                <input type="checkbox" id="politica" name="politica" />
+                <label for="politica">NO quiero recibir newsletters ni comunicaciones comerciales de GOYAZON.</label>
+            </div>
+        </fieldset>
+        <div id="enviar">
+            <button type="submit" style="background-color: rgb(226, 132, 49);color: rgb(255, 255, 255);" value="enviar">VALIDAR EL PAGO</button>
+            <button type="reset" style="background-color: rgb(255, 255, 255);color: rgb(226, 132, 49);">CANCELAR</button>
+        </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

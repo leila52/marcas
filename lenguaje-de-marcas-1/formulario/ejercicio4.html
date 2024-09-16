@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de contacto</title>
+    <style>
+        body {
+            margin: 0 auto;
+             width: 390px;
+        }
+        legend{
+            margin: 4%;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario de contacto</h1>
+    <form action="/pagServidor" method="get">
+        <legend></legend>
+        <div>
+            <label for="nom">Nombre:</label>
+            <input type="text" name="nombre" id="nom" maxlenght="25" placeholder=" Escribe tu Nombre" />
+        </div>
+        <legend></legend>
+        <div>
+            <label for="edad"> introduce tu Edad</label>
+            <input type="number" id="edad" max="120" min="18"/>
+        </div>
+        <legend></legend>
+        <div>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="em" placeholder="correo@empresa.com">
+        </div>
+        <legend></legend>
+        <div>
+            <label for="tarifa">Asunto</label>
+            <select name="tarifa" id="tarifa">
+                <optgroup label="Pedir presupueso web">
+                    <option>Pedir presupuesto web</option>
+                    <option>solicitar cita previa</option>
+                    <option>otros</option>
+                </optgroup>
+            </select>
+        </div>
+        <legend></legend>
+            <legend>¿Como nos ha conocido?</legend>
+            <div>
+                <input type="checkbox" id="conocido" name="un amigo"/>
+                <label for="conocido">Un amigo</label>
+                <input type="checkbox" id="conocido" name="en un buscador"/>
+                <label for="conocido">En un buscador Web </label>
+                <input type="checkbox" id="conocido" name="publicidad"/>
+                <label for="conocido">Publicidad</label>
+                <input type="checkbox" id="conocido" name="otros"/>
+                <label for="conocido">Otros</label>
+            </div>
+        <legend></legend>
+        <div>
+            <label for="ms">Escribe tu mensaje</label>
+            <legend></legend>
+            <textarea id="ms" name="mens"></textarea>
+        </div>
+        <legend></legend>
+        <div>
+            <input type="checkbox" id="avisolegal" name="he leído"/>
+            <label for="avisolegal">He leido y acepto el <a href="#aviso legal y la polita de privacidad" >aviso legal y la polita de privacidad</a></label>       
+        </div>
+        <legend></legend>
+        <div id="enviar">
+            <button type="submit" value="enviar">Enviar formulario</button>
+        </div>
+    </form>
+</body>
+
+</html>

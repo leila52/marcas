@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Par o Impar</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Solicitar al usuario núm
+        var inputNumero = prompt("Por favor, ingresa un número:");
+
+        // Verificar que se haya ingresado un valor
+        if (inputNumero !== null && inputNumero !== "") {
+            // Convertir valor ingresado a un num
+            var numero = parseFloat(inputNumero);
+
+            // Verificar que el valor ingresado sea un num
+            if (!isNaN(numero)) {
+                // si el número es par o impar
+                if (numero % 2 === 0) {
+                    alert("El número " + numero + " es par.");
+                } else {
+                    alert("El número " + numero + " es impar.");
+                }
+            } else {
+                alert("Por favor, ingresa un valor numérico válido.");
+            }
+        } else {
+            alert("No ingresaste ningún valor. Por favor, intenta de nuevo.");
+        }
+    </script>
+</body>
+</html>

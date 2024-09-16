@@ -1,0 +1,31 @@
+body{
+    margin: 0 20px;
+    background-color: white;
+    font-family: sans-serif;
+}
+img{
+    float: left;
+    width: 5rem;
+    margin: 10;
+}
+span{
+    float: right;
+    right: 5px;
+}
+ul{
+    float: right;
+    
+}
+ a{
+    float: right;
+    width: 15rem;
+    border: #FFB611 3px solid;
+    margin: 5px;
+    color: white;
+    background-color: #e86b2d  ;
+    text-align: center;
+}
+span a hover{
+    background-color: white;
+    color: #e86b2d;
+}

@@ -1,0 +1,128 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+#Atenas{
+    background-color: #3b7aee;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#Mykonos{
+    background-color: #6788e9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#Santorini{
+    background-color: #6788e9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#Delos {
+    background-color: #6788e9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Lista{
+    background-color: #6788e9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#Corfú{
+    background-color: #6788e9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #60acf3;
+    color: #c60909;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para los títulos principales */
+h1, h2 {
+    color: #080210;
+}
+
+/* Estilos para las listas */
+ul, ol {
+    list-style-position: inside;
+}
+
+/* Estilos para la tabla de restaurantes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+/* Estilos para las imágenes */
+.galeria{
+    display: flex;
+    width: 99%;
+    height: 99%;
+}
+.galeria img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: .7s ease;
+}
+.galeria img:hover{
+    width: 500px;
+    opacity: 1;
+    filter: brightness(130%);
+}
+
+/* Estilos para las secciones */
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.menu li{
+    float: left;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: #ffc107;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0077b6;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+section {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Estilos para los enlaces de navegación */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #0077b6;
+    border-bottom: 2px solid #0077b6;
+}
+.menu li a
+{
+display:block; /*Convertimos el vínculo en un bloque.*/
+width:150px;
+padding:4px 2px;
+text-decoration:none;/*Quitamos el subrayado al texto del enlace*/
+text-align:center;
+font-size:14px;
+color:#FFFFFF;
+background-color:#5764d6;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Red social</title>
+    <style>
+        *{
+            background-color: rgb(189, 142, 233);
+        }
+        h1{
+            color: rgb(18, 159, 224);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            border: 2px solid rgb(18, 183, 224);
+        }
+        input:hover{
+            border: 2px solid rgb(107, 18, 224);
+        }
+        div{
+            margin: 15px;
+        }
+        legend{
+            border: 2px solid rgb(107, 18, 224);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registro en una red social</h1>
+    <form action="/paginaDestino" method="get">
+        <legend></legend>
+        <div>
+            <label for="nom">Nombre</label>
+            <input type="text" name="nombre" id="nom" maxlenght="25" placeholder="Nombre" />
+        </div>
+        <legend></legend>
+        <div>
+            <label for="direccion">direccion</label>
+            <input type="text" name="direccion" id="direccion" placeholder="direccion" />
+        </div>
+        <legend></legend>
+        <div>
+            <label for="banco">Cuenta bancaria</label>
+            <input type="text" name="banco" id="banco" placeholder="Cuenta bancaria" />
+        </div>
+        <legend></legend>
+        <div>
+            <label for="tarifa">¿Que tarifa quieres usted?</label>
+            <select name="tarifa" id="tarifa">
+                <option>Tarifa joven</option>
+                <option>Tarifa Sénior</option>
+                <option>Tarifa Plana Superior</option>
+            </select>
+        </div>
+        <legend></legend>
+        <div>
+            <label for="fecha">Fecha del comienzo del servicio</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+        <legend>¿Quieres recibir notificaciones por SMS?</legend>
+        <div>
+            <label for="si">si</label>
+            <input type="radio" id="si" name="opcion" />
+            <label for="no">no</label>
+            <input type="radio" id="no" name="opcion" />
+        </div>
+
+        <legend></legend>
+        <div>
+            <label for="politica">Acepto la política de privacidad</label>
+            <input type="checkbox" id="politica" name="politica" />
+        </div>
+        <legend></legend>
+        <div id="enviar">
+            <button type="submit" style="background-color: green;color: black;" value="enviar">enviar formulario</button>
+            <button type="reset" style="background-color: red;color: black;">reiniciar </button>
+        </div>
+        
+    </form>
+    <footer>
+        <p>&copy; 2023. Todos los derechos reservados. | Síguenos en:
+            <a href target="_blank" rel="noopener noreferrer">Facebook</a>,
+            <a href target="_blank" rel="noopener noreferrer">Twitter</a>,
+            <a href target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+#caja1{
+    position: absolute;
+    top: 400px;
+    left: 210px;
+}
+#caja2{
+    position: absolute;
+    bottom: 210px;
+    top:400px;
+}
+#caja3{
+    position: absolute;
+    bottom: 210px;
+    top:600px;
+}

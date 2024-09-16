@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VALOR EN CONTROLES</title>
+    <script>
+        function capturarValores() {
+            // Obtener los valores de los diferentes controles
+            var texto = document.getElementById('texto').value;
+            var numero = document.getElementById('numero').value;
+            var password = document.getElementById('password').value;
+            var fecha = document.getElementById('fecha').value;
+            var hora = document.getElementById('hora').value;
+            var radioselecter = document.querySelector('input[name="grupoRadio"]:checked').value;
+            var checkbox = document.getElementById('checkbox').checked;
+            var checkboxes = document.querySelectorAll('input[name="grupoCheckbox"]:checked');
+            var checkboxesOpcion = Array.from(checkboxes).map(function (checkbox) {
+                return checkbox.value;
+            });
+
+            // Crear un mensaje con datos capturados
+            var mensaje = "Esta pagina dice ";
+            mensaje = "Texto: " + texto + "\n";
+            mensaje += "Número: " + numero + "\n";
+            mensaje += "Contraseña: " + password + "\n";
+            mensaje += "Fecha: " + fecha + "\n";
+            mensaje += "Hora: " + hora + "\n";
+            mensaje += "Radio: " + radioselecter + "\n";
+            mensaje += "Checkbox: " + checkbox + "\n";
+            mensaje += "Checkboxes Grupo: " + checkboxesOpcion.join(", ");
+
+            // Mostrar el mensaje en ventana alert
+            alert(mensaje);
+        }
+    </script>
+</head>
+<body>
+    <h1>VALOR EN CONTROLES</h1>
+
+    <label for="texto">Caja texto:</label>
+    <input type="text" id="texto">
+
+    <hr>
+
+    <label for="numero">caja número:</label>
+    <input type="number" id="numero">
+
+    <hr>
+
+    <label for="password">caja password</label>
+    <input type="password" id="password">
+
+    <hr>
+
+    <label for="fecha">caja fecha</label>
+    <input type="date" id="fecha">
+
+    <hr>
+
+    <label for="hora">caja hora:</label>
+    <input type="time" id="hora">
+
+    <hr>
+
+    <label>Caja radio:</label>
+    <input type="radio" name="grupoRadio" value="opcionA"> Opción
+
+    <hr>
+
+    <label for="checkbox">caja check:</label>
+    <input type="checkbox" id="checkbox">
+
+    <hr>
+
+    <label>caja check</label>
+    <label for="1">opcion1</label>
+    <input type="checkbox" id="Parcial" name="1"  />
+    <label for="2">opcion2</label>
+    <input type="checkbox" id="Parcial" name="2" />
+    <label for="3">opcion3</label>
+    <input type="checkbox" id="Parcial" name="3" checked/>
+    <label for="4">opcion4</label>
+    <input type="checkbox" id="Parcial" name="4" />
+    
+    <hr>
+    <button onclick="capturarValores()">Capturar Valores</button>
+</body>
+</html>

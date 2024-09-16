@@ -1,0 +1,84 @@
+*{
+  font-family: 'Segoe UI';
+  font-size: 1.5em;
+}
+h1{
+  color: #FF1493;
+  text-align: center;
+  border: black 10px solid;
+  font-size: 100px;
+  padding: 15px;
+}
+.Voltaire{
+  border-top: #008b8b double 50px;
+  border-left: #008b8b double 50px;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+.Voltaire >span{
+  color: #2fa09e;
+  font-size: 50px;
+}
+.Socrates{
+  border-top: #6b6ba8 dashed 10px;
+  border-left: green solid 100px;
+  border-bottom: #6b6ba8 dashed 40px;
+  border-right: green dashed 20px;
+  margin-bottom: 30px;
+  padding: 60px;
+}
+.Socrates >span{
+  color: #008000;
+  font-size: 50px;
+}
+.Rene{
+  border: #ffd700 double 50px;
+  border-left-width: 15px ;
+  border-right-width: 15px ;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 15px;
+}
+.Rene >span{
+  color: #ffd700;
+  font-size: 50px;
+}
+.Oscar{
+  border-width: 40px;
+  border-style: solid;
+  border-left-color: black;
+  border-right-color: black;
+  border-top-color: green;
+  border-bottom-color: #6b6ba8;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+.Oscar >span{
+  color: #4551be;
+  font-size: 50px;
+}
+.Jean{
+  border-top: #dc143c dashed 50px;
+  border-left: black solid 50px;
+  border-right: black solid 50px;
+  border-bottom: black dotted 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+}
+.Jean >span{
+  color: #dc143c;
+  font-size: 50px;
+}
+.Albert{
+  border-top: black dotted 15px;
+  border-left: red double 70px;
+  border-right: blue double 70px;
+  border-bottom: black dashed 35px;
+  margin-bottom: 30px;
+  padding: 70px;
+}
+.Albert  >span{
+  color: #00049c;
+  font-size: 50px;
+}
+

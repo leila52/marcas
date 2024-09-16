@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Estilos para resaltar la opción seleccionada */
+    .selected {
+      background-color: rgb(251, 4, 4);
+    }
+  </style>
+  <title>Menu seleccionable</title>
+</head>
+<body>
+
+  <h1>Menu seleccionable</h1>
+
+ 
+
+  <select id="options" size="4" onchange="highlightOption()">
+    <option value="even">¿el numero es par?</option>
+    <option value="odd">¿el numero es impar?</option>
+    <option value="prime">¿el numero es primo</option>
+    <option value="divisors">Obtener Divisores</option>
+  </select>
+  <div>
+    <button id="upArrow" onclick="navigate('up')">↑</button>
+    <button id="downArrow" onclick="navigate('down')">↓</button>
+    <input type="num" id="numberInput" placeholder="Ingrese un número">
+    <button onclick="calculate()">CALCULAR</button>
+  </div>
+
+  <div>
+    <input type="text" id="result" readonly>
+  </div>
+
+  <script>
+    let selectedIndex = 0;
+
+    function navigate(direction) {
+      const options = document.getElementById('options');
+      const totalOptions = options.length;
+
+      if (direction === 'up') {
+        selectedIndex = (selectedIndex - 1 + totalOptions) % totalOptions;
+      } else if (direction === 'down') {
+        selectedIndex = (selectedIndex + 1) % totalOptions;
+      }
+
+      highlightOption();
+    }
+
+    function highlightOption() {
+      const options = document.getElementById('options');
+      const selectedOption = options.options[selectedIndex];
+
+      // Remover la clase 'selected' de todas las opciones
+      for (let i = 0; i < options.length; i++) {
+        options.options[i].classList.remove('selected');
+      }
+
+      // Agregar clase 'selected' a la opción seleccionada
+      selectedOption.classList.add('selected');
+    }
+
+    function calculate() {
+      const numberInput = document.getElementById('numberInput');
+      const resultInput = document.getElementById('result');
+
+      const number = parseFloat(numberInput.value);
+
+      if (number > 0) {
+        // Realizar el cálculo según la opción seleccionada
+        const selectedOption = document.getElementById('options').options[selectedIndex].value;
+        let calculatedResult;
+
+        switch (selectedOption) {
+          case 'even':
+            calculatedResult = number % 2 === 0 ? 'Es par' : 'No es par';
+            break;
+          case 'odd':
+            calculatedResult = number % 2 !== 0 ? 'Es impar' : 'No es impar';
+            break;
+          case 'prime':
+            calculatedResult = isPrime(number) ? 'Es primo' : 'No es primo';
+            break;
+          case 'divisors':
+            calculatedResult = getDivisors(number);
+            break;
+          default:
+            calculatedResult = 'Operación no definida';
+            break;
+        }
+
+        // Mostrar el resultado en la caja de texto de solo lectura
+        resultInput.value = calculatedResult;
+      } else {
+        alert('El número debe ser mayor a 0.');
+      }
+    }
+
+    function isPrime(num) {
+      if (num <= 1) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    function getDivisors(num) {
+      const divisors = [];
+      for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+          divisors.push(i);
+        }
+      }
+      return 'Divisores: ' + divisors.join(', ');
+    }
+  </script>
+
+</body>
+</html>

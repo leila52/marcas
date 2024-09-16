@@ -1,0 +1,215 @@
+* === IMPORTANTE ===================================================
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================================================================== */
+
+/*-- Básico ----------------------------------------------------------*/
+ul,
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  border: none;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10pt;
+}
+
+/*-- Layout ----------------------------------------------------------*/
+#contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#cabecera,
+#menu,
+#lateral,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+  border: 2px solid #777;
+}
+
+#cabecera {
+  clear: both;
+}
+
+#menu {
+  clear: both;
+}
+
+#lateral {
+  float: left;
+  width: 20%;
+}
+
+#contenido {
+  float: right;
+  width: 78%;
+}
+
+#contenido #principal {
+  float: left;
+  width: 78%;
+}
+
+#contenido #secundario {
+  float: right;
+  width: 20%;
+}
+
+#pie {
+  clear: both;
+}
+
+/*-- Cabecera --------------------------------------------------------*/
+#cabecera #logo {
+  float: left;
+}
+
+#cabecera #buscador {
+  float: right;
+}
+
+/*-- Menu ------------------------------------------------------------*/
+#menu ul#menu_principal li {
+  display: inline;
+  float: left;
+  width: 10%;
+}
+
+/*-- Sección Principal -----------------------------------------------*/
+#contenido #principal .articulo img {
+  width: 120px;
+  float: left;
+}
+
+/*-- Pie de página ---------------------------------------------------*/
+#pie .enlaces {
+  float: left;
+}
+
+#pie .copyright {
+  float: right;
+}
+
+/* === IMPORTANTE ===================================================
+   A partir de aquí, se pueden añadir todos los estilos propios que 
+   sean necesarios.
+   ================================================================== */
+#cabecera
+{
+  padding: 1em;
+}
+#menu
+{
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: crimson;
+}
+#menu a
+{
+    color: white;
+}
+#noticias, #publicidad, #principal, #secundario
+{
+  padding: 0,5em;
+}
+#pie
+{
+ padding: 0 5em 0em 2em 0em;
+ margin-top: 1em;
+ color: white;
+ background-color: rgb(24, 24, 24);
+}
+input[type="text"]
+{
+  height: 25px;
+  border: 2px solid purple;
+}
+input[type="text"]:hover
+{
+  border-color: pink;
+}
+#pie a
+{
+    color: white;
+}
+#contenido>#principal>.articulo
+{
+    margin: 1em;
+}
+#lateral>#publicidad
+{
+margin-top: 1em;
+background-color: darkgreen;
+color: white;
+}
+.fecha
+{
+    font-style: italic;
+    font-size: 8pt;
+}
+h3 a
+{
+    color: palevioletred;
+
+}
+h3 a:hover
+{
+    color: aquamarine;
+}
+h3 a:visited
+{
+    color: brown;
+}
+#noticias a
+{
+color: cadetblue;
+}
+#noticias a:hover
+{
+    color: rgb(94, 101, 101);
+}
+/*si tienen las mismas características puedes juntarlos con una coma*/
+#noticias a:visited, #publicidad a:visited
+{
+    color: rgb(250, 12, 68);
+}
+#publicidad a
+{
+color: cadetblue;
+}
+#publicidad a:hover
+{
+    color: rgb(94, 101, 101);
+}
+
+.articulo h2
+{
+    color: rgb(245, 67, 8);
+}
+.articulo p: :nth-child(odd)
+{
+background-color: rgb(248, 165, 138);
+}

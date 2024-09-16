@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Números Aleatorios</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Función para generar un número aleatorio entre min y max
+        function generarNumeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Generar números aleatorios entre 1 y 1000 hasta  666
+        var numeroAleatorio;
+        do {
+            numeroAleatorio = generarNumeroAleatorio(1, 1000);
+            document.write( "<p>"+numeroAleatorio +"</p>");
+        } while (numeroAleatorio !== 666);
+    </script>
+</body>
+</html>

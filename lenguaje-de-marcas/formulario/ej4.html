@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        fieldset{
+            background-color: aquamarine;
+            width: 500px;
+        }
+        legend{
+            color: blueviolet;
+            font-weight: bold;
+            border: solid cornflowerblue  2px;
+        }
+    </style>
+
+</head>
+
+<body><!--checkbox=casilla para marcar -->
+    <h1>Darse de alta</h1>
+
+    <form action="/pag" method="get">
+        <fieldset>
+        <legend>Modulos de primero DAW</legend>
+        <div>
+            <label for="modulos">LM</label>
+            <!--disabled para desmarcar-->
+            <input type="checkbox" id="LM" name="mod" checked="checked" disabled="disabled"/>
+        </div>
+        <div>
+            <label for="modulos">BD</label>
+            <input type="checkbox" id="BD" name="mod" />
+        </div>
+        <div>
+            <label for="modulos">ED</label>
+            <input type="checkbox" id="ED" name="mod" />
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>pasar a segundo?</legend>
+        <div>
+            <label for="si">si</label>
+            <input type="radio" id="si"/>
+            <label for="no">no</label>
+            <input type="radio" id="no"/>
+        </div>
+        <!--si le pones el mismo nombre no podrias elegir otra opcion solo una-->
+        <div>
+            <label for="si">si</label>
+            <input type="radio" id="si" name="elegir"/>
+            <label for="no">no</label>
+            <input type="radio" id="no" name="elegir"/>
+            <label for="no">no</label>
+            <input type="radio" id="no" name="elegir"/>
+        </div>
+    </fieldset>
+    </form>
+
+</body>
+
+</html>

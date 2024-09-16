@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div{
+            margin: 15px;
+        }
+        input{
+            border: solid coral 1px;
+        }
+        input:focus{
+            border: solid rgb(80, 255, 103) 1px;
+        }
+        input,textarea{
+            border: solid coral 1px;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Darse de alta</h1>
+    <form action="/paginaDestino"method="get">
+    <div>
+        <label for="nom">Nombre</label>
+        <!--escribir desde nombre con autofocus-->
+        <input type="text" name="nombre" id="nom" autofocus="autofocus"/>
+    </div>
+    <div>
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" max="18" min="1"/>
+    </div>
+    <div>
+        <label for="mail">Email</label>
+        <!--desabilitar email disabled-->
+        <input type="email" id="mail" name="em" disabled="disabled"/>
+    </div>
+    <div>
+        <label for="ms">Mensaje</label>
+        <textarea id="ms" name="mens"></textarea>
+    </div>
+    <div>
+        <button type="submit">enviar</button> 
+        <button type="reset">cancelar</button> 
+    </div>
+    <script>
+        
+    </script>
+    </form>
+</body>
+</html>

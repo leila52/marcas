@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EJERCICIO DE CONTROLES </title>
+    <script>
+        // Función q limpia el contenido de caja de texto
+        function limpiarTexto(cajaTextoId) {
+            document.getElementById(cajaTextoId).value = '';
+        }
+        // Función q copia el contenido de una caja de text a otra
+        function copiarTexto(origenId, destinoId) {
+            var contenidoOrigen = document.getElementById(origenId).value;
+            document.getElementById(destinoId).value = contenidoOrigen;
+        }
+    </script>
+</head>
+<body>
+    <h1>EJERCICIO DE CONTROLES</h1>
+
+    <label for="texto1">Texto 1:</label>
+    <textarea id="texto1" rows="4" cols="50"></textarea>
+
+    <hr>
+
+    <button onclick="limpiarTexto('texto1')">Limpiar Texto 1</button>
+    <button onclick="copiarTexto('texto1', 'texto2')">Copiar a Texto 2</button>
+
+    <hr>
+
+    <label for="texto2">Texto 2:</label>
+    <textarea id="texto2" rows="4" cols="50"></textarea>
+
+    <hr>
+
+    <button onclick="limpiarTexto('texto2')">Limpiar Texto 2</button>
+    <button onclick="copiarTexto('texto2', 'texto1')">Copiar a Texto 1</button>
+
+</body>
+</html>
